@@ -1,0 +1,10 @@
+<h1>Add a new dose</h1>
+
+<div class="add-form w-50 p-3">
+  <%= simple_form_for @dose do |f| %>
+    <%= f.input :description %>
+    <%= f.input :dose %>
+    <%= f.submit %>
+  <% end %>
+</div>
+

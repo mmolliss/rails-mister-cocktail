@@ -1,0 +1,12 @@
+<div class="show-card w-50 p-3">
+  <h1><%= @cocktail.name %></h1>
+
+  <p><%= @ingredient.name %></p>
+  <p><%= @doses.description %></p>
+
+</div>
+
+<div class="add-edit-btn">
+  <%= link_to "Add dose", '/cocktail/:id/edit', class: "btn btn-primary ml-5"%>
+  <%= link_to "Show all cocktails", '/cocktails', class: "btn btn-primary ml-5"%>
+</div>

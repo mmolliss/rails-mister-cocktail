@@ -1,0 +1,13 @@
+<h1>Add a new Cocktail 🍸🍹🧉</h1>
+
+<div class="add-form w-50 p-3">
+  <%= simple_form_for [@cocktail, @ingredient] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :ingredients, :collection => %w[Vodka Rum Tequila Juice Lime Ice] %>
+    <%= f.input :doses %>
+    <%= f.file_field :image_url %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+

@@ -12,11 +12,15 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = Cocktail.new(restaurant_params)
+    @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       redirect_to @cocktail, notice: 'Cocktail was successfully created.'
     else
-      render :new
+      render :show[:id]
     end
+  end
+
+  def cocktail_params
+    params.require(:cocktail).permit(:name)
   end
 end

@@ -1,9 +1,9 @@
-<h1>Add a new dose</h1>
+<h1>Add a new dose 🧊</h1>
 
 <div class="add-form w-50 p-3">
-  <%= simple_form_for @dose do |f| %>
+  <%= simple_form_for [@cocktail, @dose], url: cocktail_doses_path do |f| %>
     <%= f.input :description %>
-    <%= f.input :dose %>
+    <%= f.association :ingredient %>
     <%= f.submit %>
   <% end %>
 </div>

@@ -1,12 +1,17 @@
-<div class="show-card w-50 p-3">
+<div class="show-card w-30 p-3">
   <h1><%= @cocktail.name %></h1>
 
-  <p><%= @ingredient.name %></p>
-  <p><%= @doses.description %></p>
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill  %>
+  <% end %>
 
-</div>
+  <% @cocktail.doses.each do |dose| %>
+    <p><%= dose.description %></p>
+    <p><%= dose.ingredient.name %></p>
+  <% end %>
 
-<div class="add-edit-btn">
-  <%= link_to "Add dose", '/cocktail/:id/edit', class: "btn btn-primary ml-5"%>
-  <%= link_to "Show all cocktails", '/cocktails', class: "btn btn-primary ml-5"%>
+  <div class="add-edit-btn mt-5 mr-2">
+    <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-primary"%>
+    <%= link_to "Show all cocktails", '/cocktails', class: "btn btn-outline-primary"%>
+  </div>
 </div>

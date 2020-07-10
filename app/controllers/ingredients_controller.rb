@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
   def index
-    @ingredients = Cocktail.all
+    @ingredients = Ingrediant.all
   end
 
   def show
@@ -19,6 +19,8 @@ class IngredientsController < ApplicationController
     #   render :show[:id]
     # end
   end
+
+  private
 
   def ingredient_params
     params.require(:ingredient).permit(:name)

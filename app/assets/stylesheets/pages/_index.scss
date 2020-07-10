@@ -1,2 +1,75 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  background-color: white;
+}
+.flex-container {
+  margin: 30px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px
+}
+
+.card {
+  list-style: none;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px;
+  width: 300px;
+  margin: 0 auto;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+
+  h5 {
+    margin-top: 10px;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: none; /* Do not scale the image */
+    object-position: center;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 25px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.show-card {
+  list-style: none;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0.3px solid #167FFB;
+  margin: 20px 20px;
+  width: 300px;
+  margin: 0 auto;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: none; /* Do not scale the image */
+    object-position: center;
+  }
+}
+
+.add-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.cocktail-btn {
+  text-align: center;
+}
+
+
+// .btn {
+// margin: 16px, 16px, 16px, 16px;
+// }

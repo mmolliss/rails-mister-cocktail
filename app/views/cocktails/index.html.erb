@@ -1,11 +1,17 @@
-<h1>Welcome to the Mister Cocktail 🍹</h1>
+<h1>🍸 Welcome to Mr. Cocktail 🍹</h1>
 
 <div class="flex-container">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
+      <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill  %>
+      <% end %>
       <h5><%= cocktail.name %></h5>
-      <%= link_to "Show recipe", cocktail, class: "btn btn-primary"%>
+      <%= link_to "Show recipe", cocktail, class: "btn btn-outline-primary"%>
     </div>
   <% end %>
 </div>
-<%= link_to "+Add Cocktail", "/cocktails/new", class: "btn btn-primary ml-5"%>
+
+<div class="cocktail-btn">
+  <%= link_to "+Add Cocktail", "/cocktails/new", class: "cocktail-btn btn btn-outline-primary m -5"%>
+</div>
